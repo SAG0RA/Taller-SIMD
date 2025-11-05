@@ -8,43 +8,51 @@ Además, se realiza una traducción del código SIMD a otra ISA (ARM NEON) y su 
 
 ## Requisitos
 
-- Uinux 
+- Linux  
 - GCC / G++ con soporte AVX2  
 - Python 3.10 o superior  
 - Librerías de Python:
-  ```bash
-  pip install numpy matplotlib
 
+```bash
+pip install numpy matplotlib
+```
 
-## Compilacion unitaria
-# Generador de cadenas
+---
+
+## Compilación unitaria
+
+### Generador de cadenas
+```bash
 g++ -O3 -o string_generator string_generator.cpp
+```
 
-# Conversión serial
+### Conversión serial
+```bash
 g++ -O3 -o case_converter_serial case_converter_serial.cpp
+```
 
-# Conversión SIMD (AVX2)
+### Conversión SIMD (AVX2)
+```bash
 g++ -O3 -mavx2 -march=native -o case_converter_SIMD case_converter_SIMD.cpp
+```
 
+---
 
-## Ejecucion manual
+## Ejecución manual
+
+```bash
 ./string_generator --size 1048576 --align 16 --alpha 20 --out test.bin
 ./case_converter_serial --mode upper -i test.bin
 ./case_converter_SIMD --mode upper -i test.bin
+```
 
+---
 
-## Ejecucion automatizada y generacion de graficas
+## Ejecución automatizada y generación de gráficas
 
-El siguiente script ejecuta todas las pruebas de forma automática, variando el tamaño, la alineación y el porcentaje de caracteres alfabéticos.
+El siguiente script ejecuta todas las pruebas de forma automática, variando el tamaño, la alineación y el porcentaje de caracteres alfabéticos.  
 También genera las gráficas comparativas de rendimiento.
 
+```bash
 python3 benchmark_case_converter.py
-
-## RESULTADOS
-figures/
- ├── figure_alpha_0.png
- ├── figure_alpha_10.png
- ├── figure_alpha_20.png
- ...
- └── figure3_alpha_vs_perf.png
-
+```
