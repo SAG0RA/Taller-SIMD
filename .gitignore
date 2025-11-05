@@ -1,0 +1,64 @@
+# =========================
+# Archivos temporales del sistema
+# =========================
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# =========================
+# Archivos compilados (C/C++)
+# =========================
+*.o
+*.out
+*.exe
+*.bin
+*.elf
+*.map
+*.a
+*.so
+
+# =========================
+# Directorios de build
+# =========================
+build/
+cmake-build*/
+dist/
+obj/
+Debug/
+Release/
+
+# =========================
+# Entornos virtuales de Python
+# =========================
+venv/
+.venv/
+ENV/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Resultados de ejecución
+# =========================
+*.csv
+*.png
+*.pdf
+*.dat
+*.log
+temp.bin
+
+# =========================
+# Archivos de VSCode
+# =========================
+.vscode/
+.history/
+
+# =========================
+# Archivos de proyecto específicos
+# =========================
+figures/
+results_benchmark.csv
+results_benchmark_all.csv
