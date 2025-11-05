@@ -26,5 +26,5 @@ python3 benchmark_case_converter.py
 echo "Verificando resultados..."
 ls -lh results_benchmark.csv benchmark_plot.png
 
-echo "✅ Benchmark finalizado."
+echo "Benchmark finalizado."
 deactivate
